@@ -1,0 +1,4 @@
+<div id="fb-root"></div>
+<?php $this->headScript()->appendFile('http://connect.facebook.net/en_US/all.js#xfbml=1'); ?>
+<fb:like-box href="<?php echo Rhema_SiteConfig::getConfig('settings.socialmedia.facebook.href'); ?>"
+ width="300" show_faces="true" stream="false" header="true"></fb:like-box>
