@@ -1,0 +1,159 @@
+ 
+
+#hozMenu {
+	margin: 10px auto;
+	clear: both;
+	float: none;
+}
+
+.actionBtn {
+	display: block;
+	text-align: center;
+	margin: 0 auto;
+}
+
+#hozMenu li a,.actionBtn a {
+	margin: 10px 2px;
+	display: inline;
+	min-width: 80px;
+}
+
+table.record-menu tr th,tfoot th,tr.d4 td,tfoot tr td {
+	/*background-image: url(../images/graphics/shade.png);
+	*/background-position: bottom;
+	*	
+}
+
+.emboss,.emboss th,.emboss td {
+	background: #465163 url(../images/graphics/shade.png) !important;
+	background-position: bottom;
+}
+
+.alpha:hover img {
+	filter: alpha(opacity =     40);
+	-moz-opacity: .40;
+	opacity: .40;;
+	-moz-opacity: 0.5;
+}
+
+.alphaimg {
+	filter: alpha(opacity =     100);
+	-moz-opacity: 1;
+	opacity: 1;;
+	-moz-opacity: 1;
+}
+
+.adminToolBar {
+	
+}
+
+/*.spinner-div{
+float:left;
+margin-left:20px;
+}
+
+.spinner-down,.spinner-up{
+font-size:0.5em !important;
+}
+*/
+
+
+form.FormGrid td img {
+	display: block;
+	padding: 10px 0px;
+}
+
+form.FormGrid td div.spinner-div { /*margin-left: 20px;
+*/
+	
+}
+
+
+.text {
+	border: solid 1px #ddd;
+	width: 40%;
+	padding: 2px 0;
+}
+
+span.wait-image {
+	background: url(../images/graphics/wait.gif) no-repeat center bottom;
+	display: block;
+	margin: 10px auto;
+	padding: 10px;
+}
+
+.ajax-wait {
+	text-align: center;
+}
+
+.ui-jqgrid-title {
+	color: #5a7fb4;
+	font-size: 1em;
+}
+
+.ui-jqdialog-title {
+	padding-left: 5px;
+}
+
+div.ui-jqgrid-titlebar {
+	background: #D7EBF9
+		url(../images/graphics/ui-bg_highlight-hard_100_d7ebf9_1x100.png)
+		repeat-x scroll 50% 50%;
+}
+
+div#dataGrid .ui-icon {
+	background-image: url(../images/graphics/ui-icons_3d80b3_256x240.png);
+}
+
+
+div#dataGrid .ui-state-default {
+	font-weight: normal;
+}
+
+#browser-frame {
+	width: 100%;
+	min-height: 500px;
+}
+
+#div-browser {
+	overflow: hidden;
+}
+
+.temp {
+	overflow: hidden !important;
+}
+
+a.export-icon {
+	display: block;
+	width: 16px;
+	float: left;
+	margin: 2px 5px;
+}
+
+a.export-icon:hover {
+	border: outset 1px #ccc;
+}
+
+.pancontainer {
+	position: relative; /*keep this intact*/
+	overflow: hidden; /*keep this intact*/
+	width: 300px;
+	height: 300px;
+	border: 1px solid black;
+}
+
+.magnifyarea { /* CSS to add shadow to magnified image. Optional */
+	box-shadow: 5px 5px 7px #818181;
+	-webkit-box-shadow: 5px 5px 7px #818181;
+	-moz-box-shadow: 5px 5px 7px #818181;
+	filter: progid :     DXImageTransform.Microsoft.dropShadow (     color =
+		  
+		 #818181, offX =     5, offY =     5, positive =     true );
+	background: white;
+}
+/*
+div.ui-dialog button.ui-state-default{
+	background:#333333 url(../images/graphics/ui-bg_flat_0_333333_40x100.png) repeat-x scroll 50% 50%;
+	color:#FFEF8F;
+}
+*/

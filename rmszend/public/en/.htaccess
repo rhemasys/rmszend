@@ -1,0 +1,41 @@
+SetEnv APPLICATION_ENV development
+#SetEnv APPLICATION_ENV production
+#php_value session.auto_start 0
+
+		RewriteEngine On
+		RewriteCond %{REQUEST_FILENAME} -s [OR]
+		RewriteCond %{REQUEST_FILENAME} -l [OR]
+		RewriteCond %{REQUEST_FILENAME} -d
+		RewriteRule ^.*$ - [E=RMSDIR:en,NC]
+		RewriteRule !\.(js|ico|gif|jpg|png|css|xml|htm|html|rss)$ index.php [NC,L]
+ 
+		Header unset ETag
+		FileETag none		 
+
+		<IfModule mod_expires.c>
+			ExpiresActive On
+			ExpiresByType text/html "access plus 30 seconds"
+			ExpiresByType image/gif "access plus 1 year"
+			ExpiresByType image/jpeg "access plus 1 year"
+			ExpiresByType image/png "access plus 1 year"
+			ExpiresByType text/css "access plus 1 year"
+			ExpiresByType image/ico "access plus 1 year"
+			ExpiresByType text/javascript "access plus 1 year"
+			ExpiresByType application/x-javascript "access plus 1 year"
+		</IfModule>
+
+		<FilesMatch "\.(ico|pdf|flv|jpg|jpeg|png|gif|swf)$">                        
+			Header set Cache-Control "max-age=290304000, public"
+                     Header unset Last-Modified
+		</FilesMatch>
+ 
+
+		<FilesMatch "\.(js|css|html|htm|txt)$">      
+			SetOutputFilter DEFLATE                  
+			Header set Cache-Control "max-age=604800, public, must-revalidate"
+                        Header unset Last-Modified
+		</FilesMatch>
+	
+		<FilesMatch "\.(xml|rss)$">
+			Header set Cache-Control "max-age=172800, public, must-revalidate"
+		</FilesMatch>

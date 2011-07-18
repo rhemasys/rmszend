@@ -1,0 +1,122 @@
+ body,html {
+	height: 100%;
+	min-height: 100%;
+	font-family: arial, helvetica, verdana, "sans serif";
+	font-size: 12px;
+	color: #8b8b8b;
+	background: #f7f7f7 url(/main/default/images/graphics/bg_glow.gif) top
+		center no-repeat
+}
+
+#divSurround {
+	width: 960px;
+	margin: 0 auto
+}
+
+ 
+#divContents {
+	 
+	min-height: 400px;
+	clear: both
+margin-top:20px;
+}
+
+#divBottom {
+	clear: both;
+	height: 80px
+}
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+li a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+div.sxnLogo {
+	width: 300px;
+	height: 95px;
+	float: left;
+}
+
+div.divTopMenu {
+	position: relative;
+	width: 500px;
+	float: right;
+	height: 20px;
+}
+
+div.divMainMenu {
+	float: right;
+}
+
+ul.ul-top-menu {
+	position: absolute;
+	right: 0px;
+}
+
+ul.ul-top-menu li {
+	display: inline;
+	padding: 0 0.5em;
+}
+
+ul.ul-top-menu li.last {
+	padding-right: 0;
+}
+
+ul.ul-top-menu li  a {
+	color: #8b8b8b;
+font-size:10px;
+font-weight:bold;
+}
+
+#main-menu li {
+	display: inline;
+	padding: 0 0em;
+}
+
+ul.ul-main-menu {
+	border-bottom: solid 15px #000;
+	margin-top: 45px;
+	padding-left: 20px;
+}
+
+ul.ul-main-menu li {
+	border-bottom: solid 15px #000;
+ 
+}
+
+ul.ul-main-menu li:hover, ul.ul-main-menu li.active {
+	border-color: #00a9e1;
+}
+
+ul.ul-main-menu li a {
+	text-transform: uppercase;
+	font-weight: bold;
+	padding: 0em 2em 15px;
+	color: #3a3a3a;
+}
+
+ul.ul-main-menu li.last a {
+	padding-right: 0px;
+}
+
+ul.ul-main-menu li a:hover {
+	text-decoration: none;
+}
+
+#divHeader div.seperator {
+	height: 21px;
+	border-top: solid #000 1px;
+	clear: both;
+	width: 960px;
+	position: absolute;
+	top: 95px;
+ 
+} 

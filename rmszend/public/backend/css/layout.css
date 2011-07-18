@@ -1,0 +1,560 @@
+* {
+	margin: 0;
+	padding: 0
+}
+
+html,body {
+	height: 100%;
+	min-height: 100%;
+}
+
+a {
+	color: #5a7fb4;
+}
+
+body {
+	font-size: 11px;
+	font-family: verdana, "Lucida Grande", "Lucida Sans", Arial, sans-serif,
+		Helvetica; 
+}
+
+div {
+	border: solid 0px;
+}
+
+#admin-container {
+	padding: 0;
+	width: 967px;
+	margin: 0 auto;
+	min-height: 100%;
+	position: relative;
+}
+
+#admin-topbar {
+	
+}
+ 
+#admin-main {
+	margin: 10px auto !important;
+	padding: 0;
+	width: 95%;
+	clear: both;
+	display:block;
+}
+
+.left-nav {
+	display: block;
+	float: left;
+	width: 200px;
+	padding-right:20px !important;
+	margin-right:10px;
+}
+ 
+#admin-bread-crumb {
+	display: block;
+	height: 1.5em;
+	padding: 10px 25px;
+	width: 60%;
+	float: left;
+}
+
+#admin-bread-crumb a {
+	text-decoration: none;
+	color: #5a7fb4;
+}
+
+
+
+ins#clear_cache {
+	background: url(../images/icons/fechar.png) no-repeat top left;
+}
+
+ins#logout {
+	background: url(../images/icons/logout.png) no-repeat top left;
+}
+
+footer {
+	clear: both;
+	position: relative;
+	height: 45px;
+	text-align: center;
+}
+
+img.zend-logo {
+	float: right;
+	margin-right: 20px;
+}
+
+footer a {
+	text-decoration: none;
+}
+
+label {
+	color: #600;
+	text-transform: capitalize;
+}
+
+select {
+	border: solid 1px #ddd;
+}
+
+option {
+	padding: 1px 2px;
+}
+
+#tabs {
+	height: auto;
+	overflow: auto;
+	width: 685px;
+	float: left;
+}
+
+.jqdialog {
+	z-index: 900;
+	margin: 0 auto;
+}
+
+.FormGrid textarea {
+	width: 95% !important;
+	border: solid 1px #ccc;
+	min-height: 50px !important;
+}
+
+.FormGrid select {
+	width: 25% !important;
+}
+
+.FormGrid td {
+	padding: 5px !important;
+}
+
+.field-req {
+	color: red;
+	vertical-align: top;
+}
+
+.input-text {
+	width: 50%;
+	border: solid 1px #ccc;
+	padding: 2px;
+}
+
+.short {
+	width: 25%;
+}
+
+#toolbar-button {
+	padding: 3px;
+	font-weight: normal;
+	cursor: pointer;
+	width: 120px;
+}
+
+.ui-toolbar-icon {
+	float: left;
+	display: block;
+	padding: 0;
+	margin-right: 5px;
+}
+
+.ui-jqgrid-title {
+	font-size: 1em;
+	padding-left: 15px;
+	text-transform: capitalize;
+	display: block;
+}
+
+#show-sections {
+	display: block;
+	overflow: hidden;
+	clear: both;
+}
+
+td.CaptionTD {
+	width: 100px;
+}
+
+.layout-section {
+	border: solid 1px #ddd;
+	padding: 5px 5px 0px 0px;
+	margin-bottom: 5px;
+	background-color: #ffffec;
+	min-height:40px;
+}
+
+/***************************************
+   =cluetipClass: 'rhema'
+-------------------------------------- */
+.cluetip-rhema {
+	
+}
+
+.cluetip-rhema #cluetip-outer {
+	position: relative;
+	background: #fff url("../images/graphics/bgr_body_bottom.gif") no-repeat
+		left bottom;
+	padding: 2px;
+}
+
+.cluetip-rhema h3#cluetip-title {
+	margin: 0 0 5px;
+	padding: 5px 10px;
+	font-size: 1em;
+	font-weight: bold;
+	cursor: move;
+}
+
+.cluetip-rhema #cluetip-inner {
+	padding: 5px 10px;
+	display: inline-block;
+}
+
+.cluetip-rhema div#cluetip-close {
+	text-align: right;
+	margin: 0 5px 5px;
+	color: #900;
+}
+
+/**************** sortables **************************/
+#sxn-title {
+	margin: 0;
+	padding: 0;
+	width: 90%;
+}
+
+#sxn-title {
+	margin: 0 3px 3px 3px;
+	padding: 0.4em;
+	padding-left: 1.5em;
+	font-size: 1em;
+	height: 18px;
+}
+
+#sxn-title  span {
+	position: absolute;
+	margin-left: -1.3em;
+}
+ 
+.sort-item li a,.sortable li a {
+	text-decoration: none;
+	padding: 1px 4px;
+	cursor: pointer;
+}
+
+.sort-item li,.sortable li {
+	/*background:url(../images/icons/icons.png) -64px -16px no-repeat;*/
+	padding: 0 0 0px 15px; 
+	list-style: none;
+	
+	margin: 0;
+	cursor: pointer;/*
+	font-size: 1em;
+	line-height: 16px;
+*/}
+
+#accordion-tools {
+	font-size: 1em;
+}
+
+#accordion-tools ul {
+	margin: 0px 0 20 0;
+}
+
+#layout-left li {
+	padding: 0 0 2px 15px;
+	display: table;
+	list-style: none;
+	line-height: 16px;
+	margin: 2px 0;
+}
+
+.sortable {
+	margin: 5px 0 10px 10px;
+}
+
+.sortable li {
+	width: 95%;
+	padding: 2px 0;
+	border-bottom: dashed 1px #ddd;
+}
+
+.fixed {
+	cursor: crosshair;
+}
+
+.sortable ins {
+	background-position: 0 -16px;
+}
+
+.fixed ins {
+	background-position: 0 -32px !important;
+}
+
+ins.top-level {
+	background-position: 0 -48px !important;
+}
+
+ins.fold.open {
+	background-position: -32px -48px !important;
+}
+
+ins.fold.close {
+	background-position: -48px -32px !important;
+}
+
+ins.saved {
+	background-position: 0px -48px !important;
+}
+
+#admintemplate ins {
+	background-position: -16px 0;
+}
+
+ins.remove,ins.delete {
+	float: right;
+	background-position: -16px -16px;
+	cursor: pointer;
+}
+
+.sort-item label {
+	width: 95%;
+	display: block;
+	padding-top: 5px;
+	border-bottom: solid 1px #ccc;
+	margin: 5px 0 0 15px;
+	color: #600;
+}
+
+.ui-accordion .ui-accordion-content {
+	position: static;
+}
+
+div.layout-section label {
+	width: 95%;
+	display: block;
+	margin-bottom: 5px;
+	border-bottom: solid 1px #ccc;
+	margin-left: 15px;
+}
+
+.div-sort-handle {
+	cursor: move;
+}
+
+#layout-table td {
+	padding: 5px 5px;
+	white-space: normal;
+	font-size: 12px;
+}
+
+#layout-buttons {
+	padding: 5px 15px !important;
+	text-align: right;
+}
+
+div.div-sorting {
+	border: solid 1px #600;
+	background-color: #ffffea;
+}
+
+.ui-accordion,.ui.accordion-content {
+	overflow: hidden;
+	z-index: 100;
+}
+
+span.item-count {
+	display: block;
+	float: right;
+	color: #444;
+	font-weight: normal !important;
+}
+
+div.ui-section {
+	width: 120px;
+	float: right;
+	padding: 2px 0 0 0;
+	margin: 2px 0 0 10px;
+	cursor: pointer;
+}
+
+div.elm-multicheck {
+	padding: 2px 5px;
+	border: solid 1px #ccc;
+	float: left;
+}
+
+div.elm-multicheck * {
+	float: left;
+	margin: 0;
+	padding: 0;
+}
+
+div.elm-multicheck br {
+	display: none;
+}
+
+div.elm-multicheck label {
+	width: 100px;
+	margin: 2px 5px 2px 0 !important;
+}
+
+.field_select {
+	margin-right: 5px !important;
+}
+
+#field-act-button {
+	padding: 5px 0;
+}
+
+div#left-section {
+	clear: both;
+	float: left;
+	width: 74%;
+	margin: 0px;
+}
+
+#right-section {
+	width: 22%;
+	float: right;
+	margin: 0px;
+	padding: 5px 10px 10px 15px;
+}
+
+#right-section label {
+	display: block;
+	clear: both;
+}
+
+#right-section label.search {
+	margin-bottom: 10px;
+}
+
+#right-section dt label {
+	margin: 10px 0 5px 0;
+	display: block;
+	border-top: solid 1px #ddd;
+	padding-top: 5px;
+}
+
+#right-section input {
+	margin-right: 10px;
+}
+
+#right-section br {
+	display: none;
+}
+
+#searchField-label,#oper-label {
+	width: 20%;
+	clear: both;
+	float: left;
+	display: block;
+}
+
+#searchField-label label,#oper-label label {
+	margin: 0 0 10px 0 !important;
+	border: none !important;
+	padding: 0 !important;
+}
+
+#searchField-element,#oper-element {
+	float: right;
+	width: 75%;
+}
+
+#oper-element {
+	margin-bottom: 10px;
+}
+
+div.elm-button {
+	margin-top: 10px;
+	float: right;
+	text-align: right;
+}
+
+input#by-keyword {
+	border: solid 1px #ddd;
+	width: 95%;
+	padding: 2px;
+}
+
+.result-pager {
+	margin: 10px auto;
+	padding: 6px 0;
+	text-align: center;
+}
+
+.page-number {
+	padding: 4px 6px;
+	margin: 0 2px;
+	text-decoration: none;
+}
+
+/* CSS Document */ /***************************************
+   =cluetipClass: 'kbase'
+-------------------------------------- */
+.cluetip-rhema {
+	background-color: transparent;
+}
+
+.cluetip-rhema #cluetip-outer {
+	position: relative;
+	padding: 2px;
+}
+
+.cluetip-rhema h3#cluetip-title {
+	margin: 0 0 5px;
+	padding: 2px 5px;
+	font-size: 14px;
+	font-weight: bold;
+	text-transform: capitalize;
+	cursor: move;
+}
+
+.cluetip-rhema #cluetip-inner {
+	padding: 5px 15px;
+	display: inline-block;
+}
+
+.cluetip-rhema div#cluetip-close {
+	text-align: right;
+	margin: 0 5px 5px;
+	color: #900;
+	cursor: pointer;
+}
+
+.preview-div {
+	border: solid 6px;
+	width: 800px;
+}
+
+.prev-frame {
+	width: 100%;
+	height: 600px;
+}
+
+.ui-userdata {
+	height: 35px;
+	padding: 5px 0;
+}
+
+.clearfix:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+
+.clearfix { /*display: inline-block;*/
+	
+}
+
+html[xmlns] .clearfix {
+	display: block;
+}
+
+* html .clearfix {
+	height: 1%;
+}

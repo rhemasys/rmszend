@@ -1,0 +1,7 @@
+RewriteEngine On
+ 
+RewriteCond %{REQUEST_FILENAME} -s [OR]
+RewriteCond %{REQUEST_FILENAME} -l [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^.*$ - [E=RMSDIR:kingdom,NC,L]
+RewriteRule !\.(js|ico|gif|jpg|png|css|xml|htm|html|rss)$ index.php [E=RMSDIR:kingdom,NC,L]

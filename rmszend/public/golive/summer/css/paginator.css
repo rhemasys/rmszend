@@ -1,0 +1,45 @@
+#paginator *{
+border:none;
+background:none;
+margin:0; 
+}
+#paginator{
+border:solid 1px #ccc;
+background:#f2f2f2;
+text-align:center;
+padding:3px 2px 0 3px;
+margin:5px 0;
+}
+#paginator ul {
+    margin: 0;
+padding:0;
+}
+
+#paginator .paginator-prev {
+    float: left;
+    width: 145px;
+}
+#paginator .pages-inrange{
+    display: inline-block;
+    margin: 0 auto !important;
+    text-align: center; 
+    width:auto;
+}
+
+#paginator .paginator-next {
+    float: right;
+}
+
+#paginator li {
+    background: -moz-linear-gradient(center top , #FFFFFF, #F3F3F3) repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #AAAAAA !important;
+    display: block;
+    float: left; 
+    list-style: none outside none;
+    margin: 0 2px 0 0;
+    padding: 3px 6px;
+}
+
+.pagestats{
+text-align:center;
+}

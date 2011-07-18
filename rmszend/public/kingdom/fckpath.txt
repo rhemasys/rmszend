@@ -1,0 +1,1 @@
+{"site":{"rel":"\/main\/media\/","abs":"\/home2\/kingdop2\/public_html\/main\/media\/"},"admin":{"rel":"\/","abs":"\/home2\/kingdop2\/public_html\/"}}

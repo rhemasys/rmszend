@@ -1,0 +1,74 @@
+@font-face {
+    font-family: CalligraphyFLF;
+    src: url("../fonts/CalligraphyFLF.eot");
+    src: local('CalligraphyFLF'), local('CalligraphyFLF'), url("../fonts/CalligraphyFLF.ttf") format("opentype");
+}
+ 
+@font-face {
+    font-family: Gabrielle;
+    src: url("../fonts/Gabrielle.eot");
+    src: local('Gabrielle'), local('Gabrielle'), url("../fonts/Gabrielle.ttf") format("opentype");
+}
+
+@font-face {
+    font-family: Chantelli_Antiqua;
+    src: url("../fonts/Chantelli_Antiqua.eot");
+    src: local('Chantelli_Antiqua'), local('Chantelli_Antiqua'), url("../fonts/Chantelli_Antiqua.ttf") format("opentype");
+}
+
+@font-face {
+    font-family: HoneyScript-Light;
+    src: url("../fonts/HoneyScript-Light.eot");
+    src: local('HoneyScript-Light'), local('HoneyScript-Light'), url("../fonts/HoneyScript-Light.ttf") format("opentype");
+}
+
+@font-face {
+    font-family: old_stamper;
+    src: url("../fonts/old_stamper.eot");
+    src: local('old_stamper'), local('old_stamper'), url("../fonts/old_stamper.ttf") format("opentype");
+}
+
+@font-face {
+    font-family: Sansation_Bold;
+    src: url("../fonts/Sansation_Bold.eot");
+    font-weight: bold;
+    src: local('Sansation_Bold'), local('Sansation_Bold'), url("../fonts/Sansation_Bold.ttf") format("opentype");
+}
+
+@font-face {
+    font-family: Sansation_Light;
+    src: url("../fonts/Sansation_Light.eot");
+    src: local('Sansation_Light'), local('Sansation_Light'), url("../fonts/Sansation_Light.ttf") format("opentype");
+}
+
+@font-face {
+    font-family: Sansation_Regular;
+    src: url("../fonts/Sansation_Regular.eot");
+    src: local('Sansation_Regular'), local('Sansation_Regular'), url("../fonts/Sansation_Regular.ttf") format("opentype");
+}
+
+@font-face {
+    font-family: BergamoStd;
+    src: local('BergamoStd-Regular'), local('BergamoStd-Regular'), url("../fonts/BergamoStd-Regular.otf") format("opentype");
+}
+
+@font-face {
+    font-family: BergamoStd;
+    font-style: italic;
+    src: local('BergamoStd-Italic'), local('BergamoStd-Italic'), url("../fonts/BergamoStd-Italic.otf") format("opentype");
+}
+
+@font-face {
+    font-family: BergamoStd;
+    font-weight: bold;
+    src: local('BergamoStd-Bold'), local('BergamoStd-Bold'), url("../fonts/BergamoStd-Bold.otf") format("opentype");
+}
+
+@font-face {
+    font-family: BergamoStd;
+    font-style: italic;
+    font-weight: bold;
+    src: local('BergamoStd-BoldItalic'), local('BergamoStd-BoldItalic'), url("../fonts/BergamoStd-BoldItalic.otf") format("opentype");
+}
+
+ 

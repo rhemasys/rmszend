@@ -1,0 +1,693 @@
+/* CSS Document */ /* this controls the structrue of the back end */
+html {
+	background: #F2F2F2 url("../images/graphics/bgr_html.jpg") repeat-x;
+	border-bottom: 0px solid #FFF;
+}
+
+body {
+	background: url("../images/graphics/bgr_main.gif") no-repeat scroll
+		center top;
+}
+
+#admin-container {
+	color: #555;
+	padding: 0 20px;
+	border: solid 0px #ccc;
+	border-bottom: 0;
+	border-top: 0;
+}
+
+#admin-body-top {
+	width: 100%;
+	overflow: hidden;
+	padding-bottom: 60px;
+	background: url("../images/graphics/bgr_body_bottom.gif") no-repeat left
+		bottom;
+	min-height: 740px;
+}
+
+nav {
+	display: block;
+}
+
+#module-nav {
+	right: 25px;
+	z-index: 500;
+	width: 965px;
+	display: block;
+	width: 300px;
+	float: right;
+	position: relative;
+	margin: 8px 40px 0 0;
+}
+
+#module-nav div.jqDockLabel {
+	color: #cc0000;
+	background-color: #ffffff;
+	padding: 5px;
+	font-size: 0.9em;
+	font-weight: bold;
+	margin: 15px 0 !important;
+	text-align: center;
+}
+
+#module-nav img {
+	border: 0px;
+}
+
+#quick_menus {
+	float: right;
+	width: 30%;
+	padding: 10px 27px 10px 0px;
+	height: 1.5em;
+	text-align: right;
+}
+
+#quick_menus ins:hover {
+	cursor: pointer;
+}
+
+footer {
+	padding: 20px 10px;
+	display: block;
+}
+
+.module-intro h2 {
+	margin: 10px 0;
+}
+
+.module-intro p {
+	text-align: justify;
+	padding: 10px 0px;
+}
+
+.module-intro li {
+	margin-left: 40px;
+}
+
+#rhemasys-logo {
+	
+}
+
+#admin-side-menu {
+	
+}
+
+#admin-topbar {
+	
+}
+
+#admin-top-section {
+	
+}
+
+#admin-main-body { /*
+	background: #fff url("../images/graphics/body_bg.gif") repeat-x center
+		top;	
+*/
+	
+}
+
+#admin-content {
+	clear: both;
+	padding: 0;
+	width: 100%;
+	background: #fff url("../images/graphics/body_bg.gif") repeat-x center
+		top;
+}
+
+#admin-middle-section {
+	
+}
+
+iframe {
+	
+}
+
+.ui-accordion-content {
+	height: auto !important;
+}
+
+#menu-select {
+	width: 640px;
+	display: table-cell;
+}
+
+.full-width {
+	width: 910px;
+	float: none;
+	clear: both;
+	display: table;
+	margin: 0 auto;
+	padding: 10px 0px;
+}
+
+#layout-left {
+	margin-right: 10px;
+}
+
+#layout-right {
+	
+}
+
+#menu-type input,#menu-position input {
+	margin: 5px 10px 0px 10px;
+}
+
+.menu-child {
+	clear: both;
+	display: block;
+	margin: 20px 0 20px 0 !important;
+}
+
+.data-grid {
+	display: table-cell !important;
+	vertical-align: top;
+}
+
+.menu-tree {
+	display: table-cell !important;
+	padding-left: 10px;
+}
+
+.menu-position {
+	width: 90%;
+	float: right;
+	margin-bottom: 10px;
+	border: groove 1px #ddd;
+	margin: 0px 0 10px 0;
+	padding: 5px 5px 15px 15px;
+}
+
+#root_id-label,#rootType-label {
+	display: block;
+}
+
+#child-label {
+	margin: 15px 0 5px 0;
+	display: block;
+}
+
+.ui-multiselect {
+	color: #ccc;
+}
+
+#update-tree {
+	float: right;
+	margin-bottom: 15px
+}
+
+.success {
+	text-align: center;
+	color: #0c0;
+}
+
+#ui-datepicker-div {
+	z-index: 60000;
+}
+
+optgroup {
+	margin: 5px
+}
+
+optgroup option {
+	margin-left: 20px;
+}
+
+/*=================================================*/
+div#rel-docs {
+	width: 70%;
+	margin-left: 25px;
+	float: left;
+}
+
+div#search-doc {
+	padding: 0 5px;
+	float: left;
+}
+
+#related_item {
+	display: none;
+}
+
+#finder * {
+	white-space: normal;
+}
+
+#finder {
+	top: 50%;
+	left: 50%;
+	left: - 250px;
+	overflow: hidden;
+	position: absolute;
+	z-index: 1002;
+	outline-color: -moz-use-text-color;
+	outline-style: none;
+	outline-width: 0px;
+	height: auto;
+	width: 500px;
+}
+
+#document-finder {
+	width: auto;
+	min-height: 104px;
+	height: auto;
+	padding: 10px;
+}
+
+#document-finder ol {
+	margin: 10px 30px;
+}
+
+#search-type {
+	width: 50%;
+}
+
+#document-finder table td {
+	padding: 5px;
+}
+
+#doc-keyword {
+	width: 100%;
+	height: 80px;
+}
+
+.layout-table {
+	margin: 0
+}
+
+.layout-table h3 {
+	padding: 0;
+	margin: 0;
+}
+
+#field-edit-div {
+	overflow: hidden;
+}
+
+.layout-table td {
+	padding: 5px 10px;
+	font-weight: normal !important;
+	border: none !important;
+	background-color: #f2f3f9;
+}
+
+.layout-table tr {
+	border: none;
+}
+
+#edit-layout,#add-field-div {
+	padding: 0px;
+	margin: 10px 0;
+}
+
+#edit-layout li {
+	list-style: none;
+	border-bottom: dashed 1px #ddd;
+	margin: 1px 0 2px 10px;
+	width: 90%;
+}
+
+#edit-layout label,#add-field-div label {
+	padding-top: 10px 0 5px 5px !important;
+	font-weight: bold;
+	text-transform: capitalize;
+}
+
+.right-sort label,.layout-table label {
+	padding: 5px 0 0 10px;
+	display: block;
+}
+
+#fields-tree li {
+	margin-left: 30px;
+}
+
+ins.default {
+	background-position: 0 -48px !important;
+}
+
+ins.empty {
+	background-position: 0 -32px !important;
+}
+
+ins.remove,ins.delete {
+	background-position: -16px -16px !important;
+	float: right;
+	cursor: pointer;
+}
+
+ins.update {
+	background-position: -16px -32px !important;
+	float: right;
+}
+
+.layout-tree {
+	cursor: pointer;
+}
+
+.layout-tree ins.remove,.layout-tree ins.update {
+	display: none !important;
+}
+
+.sortable ins.remove {
+	display: inline;
+}
+
+#attributes li {
+	margin: 2px 1px 3px 0;
+	border: solid 0px;
+	width: 135px;
+	float: left;
+	padding: 0;
+}
+
+#attribs {
+	padding: 10px;
+	border: solid 1px #ddd;
+	float: left;
+	background-color: #fff;
+}
+
+ul#attributes {
+	margin: 5px 0 10px 0px;
+	padding: 5px 0px 10px 25px;
+}
+
+ul#saved {
+	padding: 10px 0;
+	margin: 0;
+}
+
+ul#saved li {
+	margin: 0;
+	padding: 2px 0;
+}
+
+#tosave {
+	float: left;
+	border: solid 1px #ddd;
+	padding: 5px 0px 5px 10px;
+	margin-top: 20px;
+	width: 745px;
+	background-color: #fff;
+}
+
+#tosave ins {
+	background-position: -48px -32px;
+}
+
+.help-tips {
+	border: solid 1px #ddd;
+	margin: 10px 0;
+	padding: 10px;
+}
+
+li span.table-count {
+	display: block;
+	width: 20px;
+	float: right;
+	text-align: center;
+}
+
+div#list-otree {
+	padding: 10px;
+	height: 570px;
+	overflow: auto;
+}
+
+div#list-otree ul>li {
+	min-width: 160px;
+	margin: 2px 0;
+}
+
+#saved li>label {
+	display: block;
+	width: 150px;
+	float: left;
+}
+
+#saved li>input {
+	width: 300px;
+	border: solid 1px #ccc;
+	padding: 1px;
+}
+
+ul.layout-tree input {
+	display: none;
+}
+
+ul.layout-tree label {
+	color: #444;
+	cursor: pointer;
+}
+
+div.access-control ins.parent {
+	background-position: -32px -48px;
+}
+
+div.access-control ins.leaf {
+	background-position: -64px -16px;
+}
+
+#organise-menu {
+	display: table-cell !important;
+}
+
+#organise-menu .menu-tree {
+	padding: 10px;
+	margin: 0 5px 5px 0;
+	border: solid 1px #ddd;
+	display: block;
+	position: relative;
+	float: left;
+	width: 260px;
+	background-color: #fff;
+	min-height: 50px;
+}
+
+#top-links {
+	display: block;
+	float: right;
+	margin-left: 20px;
+}
+
+#top-links a {
+	text-decoration: none;
+}
+
+#top-links a:hover {
+	text-decoration: underline;
+	color: #ffffea;
+}
+
+.spinner-div {
+	margin-left: 5px;
+}
+
+form.FormGrid td select {
+	min-width: 120px;
+}
+
+td.grid-thumb img {
+	width: 20px;
+}
+
+form.access-form td {
+	white-space: normal !important;
+}
+
+form.access-form td>input[type=checkbox] {
+	margin: 0 auto !important;
+	text-align: center;
+	width: 100%;
+}
+
+span.field-notreg,span.field-reg {
+	float: left;
+	width: 5px;
+	color: red;
+}
+
+.ui-jqgrid img.atip {
+	display: block;
+	margin: 0 auto !important;
+	text-align: center !important;
+}
+
+form img.atip {
+	padding: 0 !important;
+}
+
+.ui-jqdialog .ui-jqconfirm {
+	box-shadow: 0 0 20px #ccc;
+	-moz-box-shadow: 0 0 10px #888;
+	-webkit-box-shadow: 0 0 10px #888;
+	width: 300px !important;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	height: 60px !important;
+}
+
+#server,.sysinfo-div {
+	max-width: 843px !important;
+	max-height: 600px !important;
+	overflow: auto;
+	padding: 20px 30px !important;
+}
+
+#div-tab-cache {
+	padding: 20px 0;
+	clear: both;
+}
+
+#div-tab-cache input {
+	float: left;
+}
+
+#div-tab-cache label {
+	padding-left: 20px;
+}
+
+#layout-items-position {
+	width: 250px;
+	float: left;
+}
+
+#layout-body {
+	display: table-cell;
+	height: 565px;
+	overflow: auto;
+	width: 500px;
+	float: right;
+	padding: 20px;
+	position: relative;
+}
+
+.acc-section {
+	padding: 1em !important;
+	height: 383px !important;
+}
+
+#layout-shell .page-desc {
+	height: 3em;
+	margin: 0px 0px 5px;
+	padding: 5px 30px;
+}
+
+.tip-details {
+	margin: 10px 0 20px;
+}
+
+.tip-details h4 {
+	margin: 0px 0 10px;
+}
+
+.tip-item {
+	padding: 2px 10px;
+	cleaR: both;
+}
+
+.tip-item label {
+	float: left;
+	width: 150px;
+}
+
+.tip-item div.content {
+	display: inline;
+	text-align: left;
+}
+
+#content div.content {
+	display: block;
+	clear: both;
+	overflow: auto;
+}
+
+.db-tools {
+	text-align: left !important;
+	width: 70%;
+	margin: 5px 0;
+	vertical-align: middle;
+	border-bottom: dotted 1px #ccc;
+	padding-bottom: 5px;
+}
+
+.db-tools label {
+	float: left;
+	margin-top: 5px;
+}
+
+ins.saved {
+	float: left;
+	padding: 0;
+}
+
+.jPicker {
+	margin-top: 20px;
+	z-index: 9000 !important;
+}
+
+ins.type-4.saved {
+	background: #a67a5f;
+}
+
+ins.type-2.saved {
+	background: #9ac79c;
+}
+
+ins.type-1.saved {
+	background: #72a9d3;
+}
+
+#cluetip-outer,#cluetip { /*overflow: auto;
+*/
+	
+}
+
+#quick_menus a {
+	padding-left: 10px;
+}
+
+#data-import {
+	display: table;
+	width: 95%;
+	border: solid 1px #ccc;
+	padding: 10px;
+}
+
+#data-import form {
+	display: table-row;
+}
+
+#data-import .table-list {
+	padding-right: 10px;
+	width: 60%;
+	display: table-cell;
+}
+
+#data-import .table-list table th {
+	padding-bottom: 10px;
+	text-align: center !important;
+}
+
+#data-import .table-list table td {
+	border-bottom: solid 1px #ccc;
+}
+
+#data-import .data-source {
+	border-left: solid 1px #ccc;
+	display: table-cell;
+	padding-left: 20px;
+}
+
+.source-option {
+	border-bottom: solid 1px #ccc;
+	margin: 5px 0 5px;
+	clear: both;
+	padding: 2px 0;
+}
+
+.data-source h4 {
+	margin-bottom: 10px;
+}
