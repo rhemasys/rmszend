@@ -1,0 +1,248 @@
+AffiliateRetailer:
+  actAs:
+    Rhema_Model_Template_Subsite:
+    SoftDelete:
+  tableName: affiliate_retailer
+  columns:
+    title:
+      type: string(255)
+      notnull: true
+    description:
+      type: string 
+    keywords:
+      type: string     
+    logo:
+      type: string(255)
+    programid:
+      type: integer(8)
+    program_name:
+      type: string(255)
+    is_active:
+      type: integer(1)
+      default: 1
+    affiliate_network_id:
+      type: integer(8)
+      notnull: true
+  relations: 
+    AffiliateNetwork:
+      foreignType: one 
+AffiliateProductCategory:
+  actAs:
+    Rhema_Model_Template_Subsite:
+  tableName: affiliate_product_category
+  columns:
+    title:
+      type: string(255)
+    categoryid:
+      type: integer(8)
+    category_name:
+      type: string(255)
+    category_path:
+      type: string(512)
+    merchant_category:
+      type: string(512)
+    affiliate_network_id:
+      type: integer(8)
+      notnull: true
+  relations: 
+    AffiliateNetwork:
+      foreignType: one       
+AffiliateNetwork:
+  actAs:
+    Rhema_Model_Template_Subsite:
+    SoftDelete:
+    Blameable:
+  tableName: affiliate_network
+  columns:
+    title:
+      type: string(150)
+      notnull: true 
+    description:
+      type: string(512)
+    url:
+      type : string(150) 
+    category_url:
+      type : string 
+    merchant_url:
+      type : string 
+    note:
+      type: string
+AffiliateFeed:
+  actAs:
+    Rhema_Model_Template_Subsite:
+    SoftDelete:
+    Blameable:
+  tableName: affiliate_feed
+  columns:
+    title:
+      type: string(150)
+      notnull: true 
+    description:
+      type : string 
+    feed_url:
+      type: string(512)
+      notnull: true
+    is_active:
+      type : integer(1)
+      default: 1
+    field_mapping:
+      type: string  
+    downloaded_at:
+      type: timestamp(25)
+    affiliate_network_id:
+      type: integer(8)
+      notnull: true
+  relations: 
+    AffiliateNetwork:
+      foreignType: one  
+AffiliateProduct:
+  options:
+    type: MyISAM
+  actAs:
+    Rhema_Model_Template_Subsite:
+    SoftDelete:
+    Blameable:
+  tableName: affiliate_product
+  columns:
+    title:
+      type: string(255)
+      notnull: true     
+    productid:
+      type: integer(8) 
+    product_name:
+      type: string(255)
+    description:
+      type: string(512)
+    deeplink:
+      type: string(512)
+    price:
+      type: decimal(10)
+    image_url:
+      type: string(512)
+    last_updated:
+      type: string(25)
+    related_products:
+      type: string(512)
+    related_product_ids:
+      type: string(2048)
+    additionalproductdetails:
+      type: string(512)
+    brand:
+      type: string(255)
+    currency:
+      type: string(25)
+    country:
+      type: string(10)
+    delivery_cost:
+      type: decimal(15)
+    delivery_period:
+      type: string(10)
+    display_price:
+      type: decimal(10)
+    barcode:
+      type: string(150)
+    embargo:
+      type: string(255)
+    expiry_at:
+      type: timestamp(25)
+    image_large_url:
+      type: string(255)    
+    image_thumbnail_url:
+      type: string(255)
+    language:
+      type: string(10)
+    promotion_details:
+      type: string(512)
+    qanda:
+      type: string(512)
+    review:
+      type: string(512)
+    short_description:
+      type: string(512)
+    stock_level:
+      type: integer(8)
+    stock_level_date_at:
+      type: timestamp(25)
+    best_sellers:
+      type: string(512)
+    type:
+      type: string(512)
+    mobile_network:
+      type: string(150)
+    contract_type:
+      type: string(150)
+    contract_length:
+      type: string(100)
+    inclusive_minutes:
+      type: string(100)
+    inclusive_texts:
+      type: string(150)
+    data_allowance:
+      type: string(150)
+    network_promotion:
+      type: string(255)
+    service_provider:
+      type: string(512)
+    stock_code:
+      type: string(512)
+    basket_url:
+      type: string(255)
+    handset_price:
+      type: decimal(10)
+    in_stock:
+      type: integer(8)
+    warranty:
+      type: string(512)
+    item_condition:
+      type: string(512)
+    offer_type:
+      type: string(512)
+    bid:
+      type: string(512)
+    model_number:
+      type: string(25)
+    affiliate_product_category_id: 
+      type: integer(8)
+      notnull : false
+    affiliate_network_id: 
+      type: integer(8) 
+    affiliate_retailer_id: 
+      type: integer(8)
+    specification:
+      type: string
+    rrp_price:
+      type: decimal(10)
+    isbn:
+      type: string(25)
+    item_condition:
+      type: string(150)
+    pre_order:
+      type: integer(1)
+    web_offer: 
+      type: integer(1)
+    valid_from:
+      type: timestamp(25)
+    valid_to:
+      type: timestamp(25)
+    product_type:
+      type: string(150)
+    ean:
+      type: integer(20)
+    search_price:
+      type: decimal(25) 
+    is_hot_pick:
+      type: integer(1)
+    unique_hash:
+      type: string(150)
+  indexes:
+    hash_index:
+      fields:
+        unique_hash: []
+      type: unique
+  relations:
+    AffiliateRetailer:
+      foreignType: one
+    AffiliateProductCategory:
+      foreignType: one
+    AffiliateNetwork:
+      foreignType: one

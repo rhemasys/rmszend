@@ -1,0 +1,40 @@
+ <?php 
+
+ 	$this->navData      = Zend_Registry::get(Rhema_Constant::NAVDATA_KEY);
+    $this->activeModule = $this->navData->getModuleData();// getModuleData()
+	echo $this->render('partials/html-headers.phtml');	
+?> 
+<body>
+ <div id="admin-container">
+
+ 	<div id="admin-main-body">
+	    <?php   echo   $this->render('partials/top-navigation.phtml') ?>
+		<div id="admin-content">
+			 <div id="admin-body-top">
+			   <nav id="quick_menus"><?php echo $this->quickMenu(); ?></nav>
+			   <div id="admin-bread-crumb">
+		   		    <div id="cur-mod-image">
+				    <?php if(isset($this->activeModule['image_file'])){ ?>
+				    		<img src="<?php echo $this->activeModule['thumb']; ?>" width="20" height="20" />
+				    <?php } ?>
+				    </div>
+			   		<?php echo $this->navigation()->breadcrumbs($this->navData->getContainer()); ?>
+			   	</div>
+					<article id="admin-main" style="display: none">   
+					<div id="message-div-area">
+						<?php echo $this->printUserMessage($this->userMessage); ?>
+					</div>
+           		        		    
+           			<?php echo $this->layout()->content; ?>
+           			<section class="tab-cache" style="display: none"><?php echo $this->layout()->render('partials/disable-tab-cache');?></section>
+           		</article>
+           		
+             </div>
+	   </div>
+
+	</div>
+	<footer id="admin-footer"><?php echo $this->render('partials/footer.phtml'); ?></footer>
+ </div>
+  <?php  echo $this->render('partials/footer-scripts.phtml'); ?>
+</body>
+</html>

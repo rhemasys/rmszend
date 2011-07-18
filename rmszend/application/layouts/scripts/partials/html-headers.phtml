@@ -1,0 +1,118 @@
+<?php echo $this->doctype('HTML5');  
+    $this->headLink()->headLink(array('rel' => 'favicon', 'href' => '/' . SITE_DIR . '/favicon.ico'), 'PREPEND' );       
+	$lang = Zend_Registry::get('Zend_Locale')->getLanguage(); 
+	$this->headMeta()->appendHttpEquiv('content-language', $lang);
+?>
+<html lang="<?php echo $lang; ?>"  xmlns:fb="http://www.facebook.com/2008/fbml" xmlns="http://www.w3.org/1999/xhtml">
+<head profile="http://www.w3.org/2006/03/hcard">
+<?php
+	$this->headScript()->appendFile('http://s7.addthis.com/js/250/addthis_widget.js')  ;
+	$this->includeJs('jquery-mega-drop-down-menu/js/jquery.hoverIntent.minified.js');
+	$title 			 = $keywords = $description = '';
+	$siteConfig      = Rhema_Util::getSessData('site-config');
+	$this->context   = Zend_Registry::isRegistered('sys-layout-context') ?  Zend_Registry::get('sys-layout-context') : false ;
+
+    $this->headScript()->prependScript(" var  siteDir = '".SITE_DIR."' ;" );
+	if(CONTEXT_ADMIN == $this->context){
+		$this->menuId = 'mega-menu';
+	 	$this->menuTheme = 'black';
+	 	$this->includeJs('jquery-mega-drop-down-menu/js/jquery.dcmegamenu.1.0.js');
+
+	 	$this->headLink()->appendStylesheet('/backend/scripts/jquery-mega-drop-down-menu/css/dcmegamenu.css') 
+	 	 				 ->appendStylesheet("/backend/scripts/jquery-mega-drop-down-menu/css/skins/{$this->menuTheme}.css") ;
+	    $this->collateScripts("jQuery('.{$this->menuId}','#admin-menu').dcMegaMenu({  rowItems: '3', speed: 'fast' });"  );
+
+		$baseHref    = $this->baseUrl();
+		if($this->activeModule){
+			$description  = $this->activeModule['description'];
+			$keywords     = $this->activeModule['label'];
+			$modTitle     = $this->activeModule['label'];
+		}
+
+		$title       = array($siteConfig['subsite']['title'],
+							'Rhema Studio Management System',
+							$modTitle
+						);
+
+		//$this->headLink()->prependStylesheet('/backend/scripts/jquery/css/redmond/jquery-ui-1.8.9.custom.css')	;
+	 }else{
+		$baseHref    = $this->rhemaLink;
+		//$title   	 = array($siteConfig['subsite']['title'], $this->layout()->pageData['meta_title']);
+		$pageTitle   = $this->layout()->pageData['meta_title'] 
+						? $this->layout()->pageData['meta_title']
+						: $this->layout()->pageData['title'];
+		if(strlen($pageTitle . $siteConfig['subsite']['title'] > 70) and (strlen($pageTitle) > 10)){
+			$title   = array($pageTitle);
+		}else{
+			$title   = array($siteConfig['subsite']['title'],$pageTitle );
+		}
+ 
+		$keywords    = $this->layout()->pageData['keyword'];
+		$description = $this->layout()->pageData['description'];
+		$description = $description ? $description : $siteConfig['subsite']['description'];
+		$keywords    = $keywords    ? $keywords    : $siteConfig['subsite']['keyword'];
+
+		$this->headMeta()->appendHttpEquiv('Page-Enter', 'progid:DXImageTransform.Microsoft.Fade(Duration=0.25)')
+	    				 ->appendHttpEquiv('Page-Exit', 'progid:DXImageTransform.Microsoft.Fade(Duration=0.25)') ;
+
+        $this->headScript()->appendScript(
+        	'var addthis_config = {
+        		data_track_clickback : true,
+        		data_ga_property : "'. Rhema_SiteConfig::getConfig('settings.google.track_id') .'",
+        		ui_language : "' . Zend_Registry::get('Zend_Locale')->getLanguage() .'",
+        		pubid       : "' . Rhema_SiteConfig::getConfig('settings.andthis.pubid'). '",
+        		ui_508_compliant : true,
+        		ui_use_addressbook :  true,
+        		ui_click: true
+        	};
+
+        	var andthis_share = {
+        		url : "http://' . Zend_Controller_Front::getInstance()->getRequest()->getHttpHost() . '",
+        		url_transforms: {
+        			clean : true
+        		}
+        	}');
+        
+        	 $this->headLink()->appendAlternate( $this->url(array(),'blog-rss-feed'), 
+	 					 					'application/rss+xml', 
+	 					 					$siteConfig['subsite']['title'] . ' - Blog Feed' 
+	 					 					);
+	}
+
+	if(!Rhema_util::isOnline()){
+		//$this->jQuery()->addJavascript('var $ = jQuery.noConflict();');
+
+		if(CONTEXT_ADMIN != $this->context){
+			//$this->includeJs('jquery.tools.min.js', Rhema_Constant::PREPEND);
+		}
+		$this->jQuery()->setLocalPath('/backend/scripts/jquery/js/jquery-'. ZendX_JQuery::DEFAULT_JQUERY_VERSION .'.min.js');
+		$this->jQuery()->setUiLocalPath('/backend/scripts/jquery/js/jquery-ui-' . ZendX_JQuery::DEFAULT_UI_VERSION . '.custom.min.js');
+		//$this->includeJs('jquery/js/jquery-ui-' . ZendX_JQuery::DEFAULT_UI_VERSION . '.custom.min.js', Rhema_Constant::PREPEND);
+		//$this->includeJs('jquery/js/jquery-'. ZendX_JQuery::DEFAULT_JQUERY_VERSION .'.min.js', Rhema_Constant::PREPEND);
+
+	}
+
+ 	if($baseHref){
+ 		echo "<base href='$baseHref' /> ";
+ 	}
+ 	$this->setMetaTags($title, $description, $keywords);
+
+ 	echo $this->headTitle();
+	echo $this->headMeta();
+	echo $this->headLink ();
+	echo $this->headStyle();
+
+	if(Zend_Registry::isRegistered(Rhema_Constant::PRE_QUERY_KEY)){
+		foreach (Zend_Registry::get(Rhema_Constant::PRE_QUERY_KEY) as $sf){
+		     $file = (strpos($sf, 'http') === false) ? SCRIPT_PATH .'/'. $sf : $sf; ?>
+			<script src="<?php echo $file; ?>"></script>
+<?php 	}
+	}
+	$this->jQuery()->addJavascript('var $ = jQuery.noConflict();');
+	echo $this->jQuery()->enable()->uiEnable()->setRenderMode(ZendX_jQuery::RENDER_ALL);
+	
+	echo $this->layout()->render('partials/tracking-code');
+?>
+</head>
+<?php flush(); ?>
+

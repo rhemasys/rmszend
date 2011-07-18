@@ -1,0 +1,21 @@
+ 
+	<div id="affilate-setup" class="full-width"> 
+		 	<div id="page-tabs"> 
+				<ul>
+						<li><a href="#tabs-1">Product Feeds</a></li>
+						<li><a href="<?php $param['table']    = 'affiliate_retailer';  
+											echo $this->url($param, 'grid-index'); 
+								     ?>">Retailers</a></li>
+						<li><a href="<?php $param['table'] = 'affiliate_product_category'; 
+										echo $this->url($param, 'grid-index');  
+								?>">Categories</a></li>
+						<li><a href="<?php $param['table']    = 'affiliate_network';  
+										echo $this->url($param, 'grid-index'); 
+							     ?>">Affiliate Networks</a></li>
+					    <li><a href="#field-mapping">Help</a></li>						 
+				</ul>
+				<div id="tabs-1">
+		 			<?php echo $this->gridData; ?>
+		 		</div> 
+		 	</div>
+	</div>

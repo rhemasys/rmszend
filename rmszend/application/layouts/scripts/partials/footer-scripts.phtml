@@ -1,0 +1,14 @@
+<?php
+		
+if(Zend_Registry::isRegistered(Rhema_Constant::SCRIPT_INDEX)){
+	$scriptArray = Zend_Registry::get(Rhema_Constant::SCRIPT_INDEX);
+	$script = implode(PHP_EOL, $scriptArray);
+	$script = "jQuery(document).ready(function() { $script });";
+	//$this->jQuery()->addOnload($script);
+	$this->headScript()->appendScript($script);
+}
+
+
+echo $this->headScript();
+ 
+?>

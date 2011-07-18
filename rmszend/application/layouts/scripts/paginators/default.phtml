@@ -1,0 +1,53 @@
+<?php
+
+if (!isset($params)) {
+    $params = array();
+}
+
+if ($this->pageCount) {
+	$front     = Zend_Controller_Front::getInstance();
+    $params    = $front->getRequest()->getParams();
+ 	$routeName = $front->getRouter()->getCurrentRouteName();
+}
+$this->collateScripts('jQuery(".pagestats:first").show();');
+?>
+<div class="clearfix pagestats" style="display:none"> <?php
+	echo $this->firstItemNumber . ' - ' . $this->lastItemNumber  . ' of '  .  $this->totalItemCount; ?>
+</div>
+<div id="paginator" class="clearfix rounded">
+
+    <span class="paginator-prev rounded"><ul><?php
+		$params['page'] = isset($this->first) ? $this->first : 1 ;
+		$href           = $this->url($params, $routeName);
+		$disable        = ($this->current == $this->first) ? ' disabled' : '';
+        echo "<li class='first{$disable} rounded ui-state-default'> <a href='$href'>&lt;&lt; first</a></li>";
+
+		$params['page'] = $this->previous ;
+		$href           = $this->url($params, $routeName);
+		$disable        = isset($this->previous) ? ' disabled' : '';
+        echo "<li class='previous{$disable} rounded ui-state-default'> <a href='$href'>&lt; prev</a></li>";
+      ?>
+    </ul></span>
+
+    <span class="pages-inrange"><ul><?php
+    foreach ($this->pagesInRange as $page){
+    		$params['page'] = $page;
+			$href           = $this->url($params, $routeName);
+			$disable        = ($page == $this->current) ? ' ui-state-active' : ' ui-state-default';
+            echo "<li class='current{$disable} rounded'> <a href='$href'>$page</a> </li>";
+	} ?>
+    </ul></span>
+
+    <span class="paginator-next"><ul> <?php
+    	$params['page']  = $this->next ;
+		$href            = $this->url($params, $routeName) ;
+		$disable         = isset($this->next) ? ' disabled' : '';
+        echo "<li class='next{$disable} rounded ui-state-default'> <a href='$href'>next &gt;</a> </li>";
+
+        $params['page']  = $this->last ;
+		$href            = $this->url($params, $routeName) ;
+		$disable         = ($this->current == $this->last) ? ' disabled' : '';
+        echo "<li class='last{$disable} rounded ui-state-default'> <a href='$href'>last &gt;&gt;</a> </li>"; ?>
+    </ul></span>
+
+</div>

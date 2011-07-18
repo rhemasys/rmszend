@@ -1,0 +1,25 @@
+<div>
+	<table class="table-to-grid" id="prev-table">
+		<thead>
+			<tr>
+				<?php foreach($this->mappedCols as $dbCol => $feedCol){?>
+				<th><?php echo $dbCol;?></th>
+				<?php } ?>
+			</tr>
+		</thead>
+		<tbody>
+			<?php 
+				foreach($this->feedValues as $val){?>
+				<tr>
+					<?php foreach($this->mappedCols as $dbCols => $feedCol){?>
+						<td><?php echo $val[$feedCol];?></td>
+					<?php }?>
+				</tr>
+			<?php }?>
+		</tbody>
+	</table>
+	<div>
+		<h3>Fields not mapped</h3>
+		<ol><li><?php  echo implode('</li><li>', $this->notMapped); ?></li></ol>		 
+	</div>
+</div>
