@@ -1,0 +1,1 @@
+{"site":{"rel":"\/golive\/media\/","abs":"H:\\wamp\\www\\zendify\\public\/golive\/media\/"},"admin":{"rel":"\/","abs":"H:\\wamp\\www\\zendify\\public\/"}}
